@@ -9,3 +9,14 @@ Using docker-compose to deploy Nexus in docker
 
 ### deploy repositories
 
+![1.jpg](https://github.com/liumapp/nexus-in-docker/blob/master/pic/1.jpg)
+
+![2.jpg](https://github.com/liumapp/nexus-in-docker/blob/master/pic/2.jpg)
+
+![3.jpg](https://github.com/liumapp/nexus-in-docker/blob/master/pic/3.jpg)
+
+![4.jpg](https://github.com/liumapp/nexus-in-docker/blob/master/pic/4.jpg)
+
+![5.jpg](https://github.com/liumapp/nexus-in-docker/blob/master/pic/5.jpg)
+
+![6.jpg](https://github.com/liumapp/nexus-in-docker/blob/master/pic/6.jpg)
