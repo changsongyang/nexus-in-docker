@@ -8,7 +8,6 @@ services:
     ports:
       - 8081:8081
     volumes:
-      - ./nexus-data:/var/nexus-data  
+      - ./nexus-data:/nexus-data  
 
 
-      
