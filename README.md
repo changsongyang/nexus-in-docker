@@ -33,7 +33,38 @@ Using docker-compose to deploy Nexus in docker
 
 		mvn deploy:deploy-file -DgroupId=com.liumapp.convert.html -DartifactId=convert-html-to-pdf -Dversion=v1.0.0 -Dpackaging=jar -Dfile=./target/convert-html-to-pdf-v1.0.0.jar -Durl=http://127.0.0.1:8081/repository/liumapp/ -DrepositoryId=liumapp
 
-	to deploy your maven project .		
+	to deploy your maven project .	
 
+	or use 
+
+		mvn deploy
+
+	but you will need update your pom file , add content below : 
+
+			<distributionManagement>
+				<repository>
+					<id>liumapp</id>
+					<url>http://127.0.0.1:8081/repository/liumapp/</url>
+				</repository>
+			</distributionManagement>
+
+	        <plugin>
+	          <groupId>org.apache.maven.plugins</groupId>
+	          <artifactId>maven-deploy-plugin</artifactId>
+	          <version>2.7</version>
+	        </plugin>
+		    <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+				  <execution>
+				      <phase>package</phase>
+				      <goals>
+				          <goal>jar</goal>
+				      </goals>
+				  </execution>
+				</executions>
+		    </plugin>				
 
 ![6.jpg](https://github.com/liumapp/nexus-in-docker/blob/master/pic/6.jpg)
